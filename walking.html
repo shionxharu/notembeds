@@ -23,7 +23,7 @@
             background-image: url('./Assets/hcwalkingspritesheet.png');
             background-repeat: no-repeat;
             background-size: 572px 326px;
-            animation: walkCycle 0.8s steps(4) infinite;
+            animation: walkCycle 1s steps(4) infinite;
         }
 
         @keyframes walkCycle {
@@ -35,11 +35,46 @@
                 background-position: -572px 0;
             }
         }
+
+        .walker-container {
+            position: absolute;
+            animation: paceAcross 20s linear infinite;
+        }
+
+        @keyframes paceAcross {
+
+            0% {
+                left: 0px;
+                transform: scaleX(1);
+            }
+
+            49.9999% {
+                left: calc(100% - 143px);
+                transform: scaleX(1);
+            }
+
+            50% {
+                left: calc(100% - 143px);
+                transform: scaleX(-1);
+            }
+
+            99.9999% {
+                left: 0px;
+                transform: scaleX(-1);
+            }
+
+            100% {
+                left: 0px;
+                transform: scaleX(1);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="heathcliff-walker"></div>
+    <div class="walker-container">
+        <div class="heathcliff-walker"></div>
+    </div>
 </body>
 
 </html>
