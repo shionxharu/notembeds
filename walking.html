@@ -11,9 +11,17 @@
         body {
             margin: 0;
             padding: 0;
-            background: #191919;
             height: 100vh;
             overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            html,
+            body {
+                background-color: #191919;
+            }
         }
 
         .walker-container {
