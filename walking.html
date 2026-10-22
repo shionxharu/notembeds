@@ -7,68 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:3</title>
     <style>
-        :root {
-            /* Adjust this decimal to resize! 1 = 100%, 0.5 = half size */
-            --scale: 0.5;
-
-            --frame-w: calc(143px * var(--scale));
-            --frame-h: calc(326px * var(--scale));
-            --sheet-w: calc(572px * var(--scale));
-        }
-
         html,
         body {
             margin: 0;
+            padding: 0;
             background: transparent !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             overflow: hidden;
         }
 
-        .heathcliff-walker {
-            width: 143px;
-            height: 326px;
-            background-image: url('./Assets/hcwalkingspritesheet.png');
-            background-repeat: no-repeat;
-            background-size: 572px 326px;
-            animation: walkCycle 1s steps(4) infinite;
-        }
-
-        @keyframes walkCycle {
-            from {
-                background-position: 0px 0;
-            }
-
-            to {
-                background-position: -572px 0;
-            }
-        }
-
         .walker-container {
             position: absolute;
+            bottom: 0px;
+            width: fit-content;
+            height: fit-content;
             animation: paceAcross 20s linear infinite;
         }
 
-        @keyframes paceAcross {
+        .heathcliff-walker {
+            height: 50vh;
+            width: auto;
+            display: block;
+            image-rendering: pixelated;
+        }
 
+        @keyframes paceAcross {
             0% {
                 left: 0px;
                 transform: scaleX(1);
             }
 
-            49.9999% {
-                left: calc(100% - 143px);
+            49.999% {
+                left: calc(100% - 100px);
                 transform: scaleX(1);
             }
 
             50% {
-                left: calc(100% - 143px);
+                left: calc(100% - 100px);
                 transform: scaleX(-1);
             }
 
-            99.9999% {
+            99.999% {
                 left: 0px;
                 transform: scaleX(-1);
             }
@@ -83,7 +62,7 @@
 
 <body>
     <div class="walker-container">
-        <div class="heathcliff-walker"></div>
+        <img src="./Assets/hc-walk.gif" class="heathcliff-walker" alt="bwah">
     </div>
 </body>
 
