@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:3</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            html,
+            body {
+                background-color: #191919;
+            }
+        }
+
+        .walker-container {
+            position: absolute;
+            bottom: 0px;
+            width: fit-content;
+            height: fit-content;
+            animation: paceAcross 20s linear infinite;
+        }
+
+        .heathcliff-walker {
+            height: 50vh;
+            width: auto;
+            display: block;
+            image-rendering: pixelated;
+        }
+
+        @keyframes paceAcross {
+            0% {
+                left: 0px;
+                transform: translateX(0%) scaleX(1);
+            }
+
+            49.999% {
+                left: 100%;
+                transform: translateX(-100%) scaleX(1);
+            }
+
+            50% {
+                left: 100%;
+                transform: translateX(-100%) scaleX(-1);
+            }
+
+            99.999% {
+                left: 0px;
+                transform: translateX(0%) scaleX(-1);
+            }
+
+            100% {
+                left: 0px;
+                transform: translateX(0%) scaleX(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="walker-container">
+        <img src="./Assets/hc-walk.gif" class="heathcliff-walker" alt="bwah">
+    </div>
+</body>
+
+</html>

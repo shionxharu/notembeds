@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:3</title>
+    <title>pwiepwiehead</title>
     <style>
         html,
         body {
@@ -29,10 +29,10 @@
             bottom: 0px;
             width: fit-content;
             height: fit-content;
-            animation: paceAcross 20s linear infinite;
+            animation: paceAcross 25s linear infinite;
         }
 
-        .heathcliff-walker {
+        .walker {
             height: 50vh;
             width: auto;
             display: block;
@@ -42,27 +42,27 @@
         @keyframes paceAcross {
             0% {
                 left: 0px;
-                transform: scaleX(1);
+                transform: translateX(0%) scaleX(1);
             }
 
             49.999% {
-                left: calc(100% - 100px);
-                transform: scaleX(1);
+                left: 100%;
+                transform: translateX(-100%) scaleX(1);
             }
 
             50% {
-                left: calc(100% - 100px);
-                transform: scaleX(-1);
+                left: 100%;
+                transform: translateX(-100%) scaleX(-1);
             }
 
             99.999% {
                 left: 0px;
-                transform: scaleX(-1);
+                transform: translateX(0%) scaleX(-1);
             }
 
             100% {
                 left: 0px;
-                transform: scaleX(1);
+                transform: translateX(0%) scaleX(1);
             }
         }
     </style>
@@ -70,7 +70,7 @@
 
 <body>
     <div class="walker-container">
-        <img src="./Assets/hc-walk.gif" class="heathcliff-walker" alt="bwah">
+        <img src="./Assets/pwie-walk.gif" class="walker" alt="bwah">
     </div>
 </body>
 
