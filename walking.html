@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notion Widget</title>
+    <title>:3</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
+            margin: 0;
             background: transparent;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #37352f;
-            /* Notion text color */
+            overflow: hidden;
         }
 
-        .card {
-            /* Your custom CSS here */
-            padding: 1.5rem;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        .heathcliff-walker {
+            width: 143px;
+            height: 326px;
+            background-image: url('./Assets/hcwalkingspritesheet.png');
+            background-repeat: no-repeat;
+            background-size: 572px 326px;
+            animation: walkCycle 0.8s steps(4) infinite;
+        }
+
+        @keyframes walkCycle {
+            from {
+                background-position: 0px 0;
+            }
+
+            to {
+                background-position: -572px 0;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <p>Your custom content here</p>
-    </div>
+    <div class="heathcliff-walker"></div>
 </body>
 
 </html>
