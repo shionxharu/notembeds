@@ -7,9 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:3</title>
     <style>
+        :root {
+            /* Adjust this decimal to resize! 1 = 100%, 0.5 = half size */
+            --scale: 0.5;
+
+            --frame-w: calc(143px * var(--scale));
+            --frame-h: calc(326px * var(--scale));
+            --sheet-w: calc(572px * var(--scale));
+        }
+
+        html,
         body {
             margin: 0;
-            background: transparent;
+            background: transparent !important;
             display: flex;
             justify-content: center;
             align-items: center;
